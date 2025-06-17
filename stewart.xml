@@ -1,0 +1,281 @@
+<mujoco model="Stewart_only">
+  <default>
+    <joint limited="true" damping="0.01" armature="0.01" frictionloss="0.01" />
+    <geom condim="4" contype="1" conaffinity="15" friction="0.9 0.2 0.2" solref="0.001 2" />
+    <motor ctrllimited="true" />
+    <equality solref="0.001 2" />
+    <default class="visualgeom">
+      <geom material="visualgeom" condim="1" contype="0" conaffinity="0" />
+    </default>
+  </default>
+
+    <compiler angle="radian" meshdir="meshes" autolimits="true" />
+    <option timestep="0.002" gravity="0 0 -9.81" wind="0 0 0" integrator="implicitfast"
+        density="1.225"
+        viscosity="1.8e-5" />
+
+    <visual>
+        <global realtime="1" />
+        <quality shadowsize="16384" numslices="28" offsamples="4" />
+        <headlight diffuse="1 1 1" specular="0.5 0.5 0.5" active="1" />
+        <rgba fog="1 0 0 1" haze="1 1 1 1" />
+    </visual>
+
+  <asset>
+    <texture name="texplane" type="2d" builtin="checker" rgb1=".0 .0 .0" rgb2=".8 .8 .8" width="100" height="100" />
+    <material name="matplane" reflectance="0." texture="texplane" texrepeat="1 1" texuniform="true" />
+    <material name="default_material" rgba="0.7 0.7 0.7 1" />
+    <mesh name="base_link.stl" file="base_link.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X1bottom_1.stl" file="X1bottom_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="cylinder1_1.stl" file="cylinder1_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="rod1_1.stl" file="rod1_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="piston1_1.stl" file="piston1_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X1top_1.stl" file="X1top_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="UJ1_1.stl" file="UJ1_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="TOP_1.stl" file="TOP_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X6bottom_1.stl" file="X6bottom_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="cylinder6_1.stl" file="cylinder6_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="rod6_1.stl" file="rod6_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="piston6_1.stl" file="piston6_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X6top_1.stl" file="X6top_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="UJ6_1.stl" file="UJ6_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X5bottom_1.stl" file="X5bottom_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="cylinder5_1.stl" file="cylinder5_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="rod5_1.stl" file="rod5_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="piston5_1.stl" file="piston5_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X5top_1.stl" file="X5top_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="UJ5_1.stl" file="UJ5_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X2bottom_1.stl" file="X2bottom_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="cylinder2_1.stl" file="cylinder2_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="rod2_1.stl" file="rod2_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="piston2_1.stl" file="piston2_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X2top_1.stl" file="X2top_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="UJ2_1.stl" file="UJ2_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X4bottom_1.stl" file="X4bottom_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="cylinder4_1.stl" file="cylinder4_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="rod4_1.stl" file="rod4_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="piston4_1.stl" file="piston4_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X4top_1.stl" file="X4top_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="UJ4_1.stl" file="UJ4_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X3bottom_1.stl" file="X3bottom_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="cylinder3_1.stl" file="cylinder3_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="rod3_1.stl" file="rod3_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="piston3_1.stl" file="piston3_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="X3top_1.stl" file="X3top_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="UJ3_1.stl" file="UJ3_1.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+
+  <worldbody>
+    <light directional="true" diffuse="0.4 0.4 0.4" specular="0.1 0.1 0.1" pos="0 0 5.0" dir="0 0 -1" castshadow="false" />
+    <geom name="ground" type="plane" pos="0 0 0" size="10 10 0.001" quat="1 0 0 0" material="matplane" condim="3" contype="1" conaffinity="65535" />
+    <!-- <body name="root" pos="0 0 0" quat="1 0 0 0"> -->
+      <!-- <freejoint name="root" /> -->
+      <!-- <site pos="0 0 0" quat="1 0 0 0" /> -->
+        <body name="base" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+          <inertial pos="2.3255814076482495e-11 -1.1937212521199739e-11 0.013288962255547656" quat="1.0 0.0 0.0 0.0" mass="13.757667475145922" diaginertia="0.217974 0.217974 0.434077" />
+          <geom pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="base_link.stl" contype="2" conaffinity="1"/>
+          <body name="X1bottom_1" pos="-0.160375 -0.15639 0.064756" quat="1.0 0.0 0.0 0.0">
+            <joint name="r_xb1" type="hinge" range="-0.785398 0.785398" axis="-0.5 -0.866025 -0.0" />
+            <inertial pos="0.01275003478154274 0.02208392696742542 -4.072401300903028e-07" quat="1.0 0.0 0.0 0.0" mass="0.015369342112821465" diaginertia="2e-06 2e-06 3e-06" />
+            <geom pos="0.160375 0.15639 -0.064756" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X1bottom_1.stl" contype="0" conaffinity="0" />
+            <body name="cylinder1_1" pos="0.032934 0.010431 -0.010949" quat="1.0 0.0 0.0 0.0">
+              <joint name="r_xb_rod1" type="hinge" range="-0.785398 0.785398" axis="0.783838 -0.452549 -0.425202" />
+              <inertial pos="0.02729482532372013 -0.016329820457659128 0.12825573678482122" quat="1.0 0.0 0.0 0.0" mass="1.0834595971642158" diaginertia="0.00397 0.004331 0.001152" />
+              <geom pos="0.127441 0.145959 -0.053807" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="cylinder1_1.stl" contype="0" conaffinity="0" />
+              <body name="rod1_1" pos="0.067736 -0.040165 0.228176" quat="1.0 0.0 0.0 0.0">
+                <joint name="s1" type="slide" range="0.0 0.19" axis="0.366326 -0.215903 0.905092" />
+                <inertial pos="-0.0363119660977582 0.02140153438053846 -0.08971792919781321" quat="1.0 0.0 0.0 0.0" mass="0.2833716573537993" diaginertia="0.000826 0.000908 0.000184" />
+                <geom pos="0.059705 0.186124 -0.281983" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="rod1_1.stl" contype="0" conaffinity="0" />
+                <body name="piston1_1" pos="0.000321 -0.000189 0.000791" quat="1.0 0.0 0.0 0.0">
+                  <joint name="r_rod1" type="hinge" range="0.0 6.283185" axis="0.366326 -0.215903 0.905092" />
+                  <inertial pos="0.003260719383217446 -0.00192086747489148 0.008055557047720485" quat="1.0 0.0 0.0 0.0" mass="0.08578443099201062" diaginertia="1.9e-05 2e-05 2.7e-05" />
+                  <geom pos="0.059384 0.186313 -0.282774" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="piston1_1.stl" contype="0" conaffinity="0" />
+                  <body name="X1top_1" pos="0.036216 0.003685 0.030422" quat="1.0 0.0 0.0 0.0">
+                    <joint name="r_rod_xt1" type="hinge" range="-0.785398 0.785398" axis="-0.845561 -0.483234 0.226959" />
+                    <inertial pos="-0.021561342143433596 -0.012322044617543215 0.0057870217842545535" quat="1.0 0.0 0.0 0.0" mass="0.015369342112821583" diaginertia="2e-06 2e-06 4e-06" />
+                    <geom pos="0.023168 0.182628 -0.313196" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X1top_1.stl" contype="0" conaffinity="0" />
+                    <body name="UJ1_1" pos="-0.008779 -0.034675 0.005815" quat="1.0 0.0 0.0 0.0">
+                      <joint name="r_xt1" type="hinge" range="0.0 6.283185" axis="0.496404 -0.868091 0.001097" />
+                      <inertial pos="-0.012837420559777761 0.022361614937716018 0.030940336511158628" quat="1.0 0.0 0.0 0.0" mass="0.08446437141832064" diaginertia="1.9e-05 1.7e-05 2.8e-05" />
+                      <geom pos="0.031947 0.217303 -0.319011" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="UJ1_1.stl" contype="64" conaffinity="64" />
+                      <body name="TOP_1" pos="-0.012852 0.022363 0.039728" quat="1.0 0.0 0.0 0.0">
+                        <inertial pos="0.04328903595379507 0.19482493931376896 0.010581548215173764" quat="1.0 0.0 0.0 0.0" mass="13.182708498536908" diaginertia="0.206266 0.206265 0.411168" />
+                        <geom pos="0.044799 0.19494 -0.358739" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="TOP_1.stl" contype="64" conaffinity="64" />
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="X2bottom_1" pos="-0.202875 -0.082778 0.064756" quat="1.0 0.0 0.0 0.0">
+            <joint name="r_xb2" type="hinge" range="-0.785398 0.785398" axis="-0.5 -0.866025 0.0" />
+            <inertial pos="0.012750057742457827 0.022084073032612075 -4.07240119418284e-07" quat="1.0 0.0 0.0 0.0" mass="0.01536934211282146" diaginertia="2e-06 2e-06 4e-06" />
+            <geom name="X2bottom_1_visual_0" pos="0.202875 0.082778 -0.064756" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X2bottom_1.stl" contype="0" conaffinity="0" />
+            <body name="cylinder2_1" pos="0.034413 0.009577 0.006111" quat="1.0 0.0 0.0 0.0">
+              <joint name="r_xb_rod2" type="hinge" range="-0.785398 0.785398" axis="0.841279 -0.485713 0.237344" />
+              <inertial pos="-0.022200241098937062 0.0686570498281845 0.11070095070557585" quat="1.0 0.0 0.0 0.0" mass="1.083459599703058" diaginertia="0.004522 0.003751 0.001181" />
+              <geom name="cylinder2_1_visual_0" pos="0.168462 0.073201 -0.070867" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="cylinder2_1.stl" contype="0" conaffinity="0" />
+              <body name="rod2_1" pos="-0.022658 0.116484 0.210199" quat="1.0 0.0 0.0 0.0">
+                <joint name="s2" type="slide" range="0.0 0.19" axis="-0.004145 0.433229 0.901274" />
+                <inertial pos="0.00040765407980625223 -0.0425838018149945 -0.08859030306524057" quat="1.0 0.0 0.0 0.0" mass="0.2833716573537998" diaginertia="0.000952 0.000776 0.00019" />
+                <geom name="rod2_1_visual_0" pos="0.19112 -0.043283 -0.281066" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="rod2_1.stl" contype="0" conaffinity="0" />
+                <body name="piston2_1" pos="-7e-06 0.000739 0.001537" quat="1.0 0.0 0.0 0.0">
+                  <joint name="r_rod2" type="hinge" range="0.0 6.283185" axis="-0.004145 0.433229 0.901274" />
+                  <inertial pos="-3.6747621563193444e-05 0.00385505605944253 0.008022004528809967" quat="1.0 0.0 0.0 0.0" mass="0.08578414622058635" diaginertia="2e-05 1.9e-05 2.6e-05" />
+                  <geom name="piston2_1_visual_0" pos="0.191127 -0.044022 -0.282603" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="piston2_1.stl" contype="0" conaffinity="0" />
+                  <body name="X2top_1" pos="-5.1e-05 0.040314 0.025009" quat="1.0 0.0 0.0 0.0">
+                    <joint name="r_rod_xt2" type="hinge" range="-0.785398 0.785398" axis="-0.004501 -0.901281 0.433212" />
+                    <inertial pos="-0.00011466195212661567 -0.022982312625086758 0.011047143465836295" quat="1.0 0.0 0.0 0.0" mass="0.015369342112821335" diaginertia="2e-06 2e-06 3e-06" />
+                    <geom name="X2top_1_visual_0" pos="0.191178 -0.084336 -0.307612" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X2top_1.stl" contype="0" conaffinity="0" />
+                    <body name="UJ2_1" pos="-0.025864 -0.022876 0.011002" quat="1.0 0.0 0.0 0.0">
+                      <joint name="r_xt2" type="hinge" range="0.0 6.283185" axis="-0.99999 0.004146 -0.001764" />
+                      <inertial pos="0.025693864744190664 -9.844998390469428e-05 0.031013457675736433" quat="1.0 0.0 0.0 0.0" mass="0.08446437149882718" diaginertia="1.7e-05 1.9e-05 2.8e-05" />
+                      <geom name="UJ2_1_visual_0" pos="0.217042 -0.06146 -0.318614" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="UJ2_1.stl" contype="64" conaffinity="64" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="X3bottom_1" pos="-0.02975 0.172916 0.064756" quat="1.0 0.0 0.0 0.0">
+            <joint name="r_xb3" type="hinge" range="-0.785398 0.785398" axis="0.5 -0.866025 0.0" />
+            <inertial pos="-0.01274998851950876 0.02208400662826518 -4.072401302013251e-07" quat="1.0 0.0 0.0 0.0" mass="0.015369342112821387" diaginertia="2e-06 2e-06 3e-06" />
+            <geom name="X3bottom_1_visual_0" pos="0.02975 -0.172916 -0.064756" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X3bottom_1.stl" contype="0" conaffinity="0" />
+            <body name="cylinder3_1" pos="0.007354 0.033691 0.011142" quat="1.0 0.0 0.0 0.0">
+              <joint name="r_xb_rod3" type="hinge" range="-0.785398 0.785398" axis="0.78075 0.450766 0.43271" />
+              <inertial pos="-0.06886834961262803 -0.039309713367164906 0.10570290713184599" quat="1.0 0.0 0.0 0.0" mass="1.0834597856232793" diaginertia="0.00394 0.004335 0.001178" />
+              <geom name="cylinder3_1_visual_0" pos="0.022396 -0.206607 -0.075898" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="cylinder3_1.stl" contype="0" conaffinity="0" />
+              <body name="rod3_1" pos="-0.110405 -0.062906 0.20523" quat="1.0 0.0 0.0 0.0">
+                <joint name="s3" type="slide" range="0.0 0.19" axis="-0.376245 -0.213742 0.901529" />
+                <inertial pos="0.03698945499219167 0.021013065163081268 -0.08863127807602841" quat="1.0 0.0 0.0 0.0" mass="0.2833716573537997" diaginertia="0.000819 0.000909 0.00019" />
+                <geom name="rod3_1_visual_0" pos="0.132801 -0.143701 -0.281128" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="rod3_1.stl" contype="0" conaffinity="0" />
+                <body name="piston3_1" pos="-0.000635 -0.000361 0.001522" quat="1.0 0.0 0.0 0.0">
+                  <joint name="r_rod3" type="hinge" range="0.0 6.283185" axis="-0.376245 -0.213742 0.901529" />
+                  <inertial pos="-0.003348642128974705 -0.001903364795347251 0.008023117770736776" quat="1.0 0.0 0.0 0.0" mass="0.08578406699699544" diaginertia="2.1e-05 1.8e-05 2.7e-05" />
+                  <geom name="piston3_1_visual_0" pos="0.133436 -0.14334 -0.28265" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="piston3_1.stl" contype="0" conaffinity="0" />
+                  <body name="X3top_1" pos="-0.014959 0.016252 0.041985" quat="1.0 0.0 0.0 0.0">
+                    <joint name="r_rod_xt3" type="hinge" range="-0.785398 0.785398" axis="-0.003623 -0.97268 -0.232123" />
+                    <inertial pos="-9.28858073003247e-05 -0.024803007598659416 -0.0059191862387001914" quat="1.0 0.0 0.0 0.0" mass="0.015369342112821555" diaginertia="2e-06 2e-06 4e-06" />
+                    <geom name="X3top_1_visual_0" pos="0.148395 -0.159592 -0.324635" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X3top_1.stl" contype="0" conaffinity="0" />
+                    <body name="UJ3_1" pos="0.025657 -0.02491 -0.005874" quat="1.0 0.0 0.0 0.0">
+                      <joint name="r_xt3" type="hinge" range="0.0 6.283185" axis="0.99999 -0.004146 0.001764" />
+                      <inertial pos="-0.025803583885874712 0.00011496804616903389 0.030923131071302012" quat="1.0 0.0 0.0 0.0" mass="0.08446437149876586" diaginertia="1.7e-05 1.9e-05 2.8e-05" />
+                      <geom name="UJ3_1_visual_0" pos="0.122738 -0.134682 -0.318761" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="UJ3_1.stl" contype="64" conaffinity="64" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="X4bottom_1" pos="0.05525 0.172916 0.064756" quat="1.0 0.0 0.0 0.0">
+            <joint name="r_xb4" type="hinge" range="-0.785398 0.785398" axis="0.5 -0.866025 -0.0" />
+            <inertial pos="-0.012750011480423325 0.022083993371774968 -4.0724011886317246e-07" quat="1.0 0.0 0.0 0.0" mass="0.01536934211282148" diaginertia="2e-06 2e-06 4e-06" />
+            <geom name="X4bottom_1_visual_0" pos="-0.05525 -0.172916 -0.064756" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X4bottom_1.stl" contype="0" conaffinity="0" />
+            <body name="cylinder4_1" pos="0.008963 0.03462 -0.00587" quat="1.0 0.0 0.0 0.0">
+              <joint name="r_xb_rod4" type="hinge" range="-0.785398 0.785398" axis="0.843228 0.486838 -0.227936" />
+              <inertial pos="0.026240778221358257 -0.04079286613222788 0.12291755682136629" quat="1.0 0.0 0.0 0.0" mass="1.0834593902746585" diaginertia="0.003958 0.004327 0.001167" />
+              <geom name="cylinder4_1_visual_0" pos="-0.064213 -0.207536 -0.058886" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="cylinder4_1.stl" contype="0" conaffinity="0" />
+              <body name="rod4_1" pos="0.067087 -0.064862 0.222617" quat="1.0 0.0 0.0 0.0">
+                <joint name="s4" type="slide" range="0.0 0.19" axis="0.36999 -0.218018 0.903092" />
+                <inertial pos="-0.03634169091616525 0.02141475285206132 -0.08870439058730761" quat="1.0 0.0 0.0 0.0" mass="0.28337165735379954" diaginertia="0.000823 0.000907 0.000187" />
+                <geom name="rod4_1_visual_0" pos="-0.1313 -0.142674 -0.281503" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="rod4_1.stl" contype="0" conaffinity="0" />
+                <body name="piston4_1" pos="0.000657 -0.000387 0.001605" quat="1.0 0.0 0.0 0.0">
+                  <joint name="r_rod4" type="hinge" range="0.0 6.283185" axis="0.36999 -0.218018 0.903092" />
+                  <inertial pos="0.0032926577328955264 -0.0019400363790381403 0.008037838079846149" quat="1.0 0.0 0.0 0.0" mass="0.08578412180440002" diaginertia="1.9e-05 2e-05 2.6e-05" />
+                  <geom name="piston4_1_visual_0" pos="-0.131957 -0.142287 -0.283108" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="piston4_1.stl" contype="0" conaffinity="0" />
+                  <body name="X4top_1" pos="0.034701 -0.020313 0.025178" quat="1.0 0.0 0.0 0.0">
+                    <joint name="r_rod_xt4" type="hinge" range="-0.785398 0.785398" axis="-0.780368 0.454538 0.429443" />
+                    <inertial pos="-0.019898963252462376 0.01159097769330164 0.010950537929455939" quat="1.0 0.0 0.0 0.0" mass="0.015369342112821675" diaginertia="2e-06 2e-06 3e-06" />
+                    <geom name="X4top_1_visual_0" pos="-0.166658 -0.121974 -0.308286" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X4top_1.stl" contype="0" conaffinity="0" />
+                    <body name="UJ4_1" pos="-0.006932 0.033838 0.010968" quat="1.0 0.0 0.0 0.0">
+                      <joint name="r_xt4" type="hinge" range="0.0 6.283185" axis="0.503586 0.863945 0.000667" />
+                      <inertial pos="-0.013021154103656923 -0.022238306259387025 0.030950854232405622" quat="1.0 0.0 0.0 0.0" mass="0.08446437135502799" diaginertia="1.9e-05 1.7e-05 2.8e-05" />
+                      <geom name="UJ4_1_visual_0" pos="-0.159726 -0.155812 -0.319254" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="UJ4_1.stl" contype="64" conaffinity="64" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="X5bottom_1" pos="0.215625 -0.060694 0.064756" quat="1.0 0.0 0.0 0.0">
+            <joint name="r_xb5" type="hinge" range="-0.785398 0.785398" axis="1.0 -0.0 -0.0" />
+            <inertial pos="-0.025500046262034837 6.640431129967261e-08 -4.072401355581512e-07" quat="1.0 0.0 0.0 0.0" mass="0.015369342112821526" diaginertia="2e-06 2e-06 3e-06" />
+            <geom name="X5bottom_1_visual_0" pos="-0.215625 0.060694 -0.064756" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X5bottom_1.stl" contype="0" conaffinity="0" />
+            <body name="cylinder5_1" pos="-0.0255 -0.023275 0.011014" quat="1.0 0.0 0.0 0.0">
+              <joint name="r_xb_rod5" type="hinge" range="-0.785398 0.785398" axis="-0.0 -0.903898 0.427748" />
+              <inertial pos="-0.0005391942218705703 0.07871427363633557 0.1061369773985035" quat="1.0 0.0 0.0 0.0" mass="1.0834593359661664" diaginertia="0.004524 0.003769 0.001161" />
+              <geom name="cylinder5_1_visual_0" pos="-0.190125 0.083969 -0.07577" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="cylinder5_1.stl" contype="0" conaffinity="0" />
+              <body name="rod5_1" pos="-0.000998 0.125936 0.205924" quat="1.0 0.0 0.0 0.0">
+                <joint name="s5" type="slide" range="0.0 0.19" axis="-0.00416 0.427745 0.90389" />
+                <inertial pos="0.00040876764670991217 -0.04207635461802559 -0.0889138885284477" quat="1.0 0.0 0.0 0.0" mass="0.28337165735379943" diaginertia="0.000952 0.00078 0.000186" />
+                <geom name="rod5_1_visual_0" pos="-0.189127 -0.041967 -0.281694" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="rod5_1.stl" contype="0" conaffinity="0" />
+                <body name="piston5_1" pos="-7e-06 0.000698 0.001475" quat="1.0 0.0 0.0 0.0">
+                  <joint name="r_rod5" type="hinge" range="0.0 6.283185" axis="-0.00416 0.427745 0.90389" />
+                  <inertial pos="-3.796842945222312e-05 0.003807538312228631 0.00804468407875164" quat="1.0 0.0 0.0 0.0" mass="0.08578423958035213" diaginertia="1.8e-05 2.1e-05 2.7e-05" />
+                  <geom name="piston5_1_visual_0" pos="-0.18912 -0.042665 -0.283169" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="piston5_1.stl" contype="0" conaffinity="0" />
+                  <body name="X5top_1" pos="0.021242 0.004629 0.042167" quat="1.0 0.0 0.0 0.0">
+                    <joint name="r_rod_xt5" type="hinge" range="-0.785398 0.785398" axis="-0.83956 0.489554 -0.235533" />
+                    <inertial pos="-0.021408625059915254 0.012483273926971863 -0.00600622023844799" quat="1.0 0.0 0.0 0.0" mass="0.015369342112821502" diaginertia="2e-06 2e-06 4e-06" />
+                    <geom name="X5top_1_visual_0" pos="-0.210362 -0.047294 -0.325336" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X5top_1.stl" contype="0" conaffinity="0" />
+                    <body name="UJ5_1" pos="-0.008441 0.03473 -0.005989" quat="1.0 0.0 0.0 0.0">
+                      <joint name="r_xt5" type="hinge" range="0.0 6.283185" axis="0.503586 0.863945 0.000667" />
+                      <inertial pos="-0.013022605591247183 -0.022239603834112852 0.030951095080068047" quat="1.0 0.0 0.0 0.0" mass="0.08446437135496666" diaginertia="1.9e-05 1.7e-05 2.8e-05" />
+                      <geom name="UJ5_1_visual_0" pos="-0.201921 -0.082024 -0.319347" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="UJ5_1.stl" contype="64" conaffinity="64" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="X6bottom_1" pos="0.173125 -0.134306 0.064756" quat="1.0 0.0 0.0 0.0">
+            <joint name="r_xb6" type="hinge" range="-0.785398 0.785398" axis="1.0 -0.0 0.0" />
+            <inertial pos="-0.025500046262033477 -6.640439273453147e-08 -4.0724012444204316e-07" quat="1.0 0.0 0.0 0.0" mass="0.015369342112821434" diaginertia="2e-06 2e-06 4e-06" />
+            <geom name="X6bottom_1_visual_0" pos="-0.173125 0.134306 -0.064756" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X6bottom_1.stl" contype="0" conaffinity="0" />
+            <body name="cylinder6_1" pos="-0.0255 0.025035 0.006026" quat="1.0 0.0 0.0 0.0">
+              <joint name="r_xb_rod6" type="hinge" range="-0.785398 0.785398" axis="0.0 0.972225 0.234048" />
+              <inertial pos="-0.04936437063232299 -0.05308323327299884 0.11048411160322401" quat="1.0 0.0 0.0 0.0" mass="1.083459541527402" diaginertia="0.003927 0.004328 0.001198" />
+              <geom name="cylinder6_1_visual_0" pos="-0.147625 0.109271 -0.070782" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="cylinder6_1.stl" contype="0" conaffinity="0" />
+              <body name="rod6_1" pos="-0.091412 -0.076974 0.209726" quat="1.0 0.0 0.0 0.0">
+                <joint name="s6" type="slide" range="0.0 0.19" axis="-0.380874 -0.216407 0.898945" />
+                <inertial pos="0.037383047951974016 0.021240492770698255 -0.08823245154948317" quat="1.0 0.0 0.0 0.0" mass="0.2833716573537994" diaginertia="0.000816 0.000908 0.000194" />
+                <geom name="rod6_1_visual_0" pos="-0.056213 0.186245 -0.280508" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="rod6_1.stl" contype="0" conaffinity="0" />
+                <body name="piston6_1" pos="-0.000704 -0.0004 0.001662" quat="1.0 0.0 0.0 0.0">
+                  <joint name="r_rod6" type="hinge" range="0.0 6.283185" axis="-0.380874 -0.216407 0.898945" />
+                  <inertial pos="-0.0033895159992465007 -0.0019258741237710708 0.008001250404574778" quat="1.0 0.0 0.0 0.0" mass="0.08578421036573615" diaginertia="1.9e-05 2e-05 2.6e-05" />
+                  <geom name="piston6_1_visual_0" pos="-0.055509 0.186645 -0.28217" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="piston6_1.stl" contype="0" conaffinity="0" />
+                  <body name="X6top_1" pos="0.004656 0.002732 0.047133" quat="1.0 0.0 0.0 0.0">
+                    <joint name="r_rod_xt6" type="hinge" range="-0.785398 0.785398" axis="-0.780129 -0.446658 -0.438059" />
+                    <inertial pos="-0.019893465178586138 -0.011389699074627252 -0.011170064502357191" quat="1.0 0.0 0.0 0.0" mass="0.015369342112822157" diaginertia="2e-06 2e-06 3e-06" />
+                    <geom name="X6top_1_visual_0" pos="-0.060165 0.183913 -0.329303" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="X6top_1.stl" contype="0" conaffinity="0" />
+                    <body name="UJ6_1" pos="-0.007111 -0.033743 -0.011142" quat="1.0 0.0 0.0 0.0">
+                      <joint name="r_xt6" type="hinge" range="0.0 6.283185" axis="0.496404 -0.868091 0.001097" />
+                      <inertial pos="-0.012837553348221412 0.022360664031001204 0.03148874152476355" quat="1.0 0.0 0.0 0.0" mass="0.089765809021081" diaginertia="2e-05 1.9e-05 3e-05" />
+                      <geom name="UJ6_1_visual_0" pos="-0.053054 0.217656 -0.318161" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="UJ6_1.stl" contype="64" conaffinity="64" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      <!-- </body> -->
+  </worldbody>
+  <equality>
+    <weld name="rigid2" body1="UJ2_1" body2="TOP_1" relpose="0.166391815 -0.2560476 0.04 1 0 0 0"/>
+    <weld name="rigid3" body1="UJ3_1" body2="TOP_1" relpose="0.05668585061 -0.33034378 0.04 1 0 0 0"/>
+    <weld name="rigid4" body1="UJ4_1" body2="TOP_1" relpose="-0.206484475 -0.3503224248 0.04 1 0 0 0"/>
+    <weld name="rigid5" body1="UJ5_1" body2="TOP_1" relpose="-0.238636273 -0.2749510036 0.038 1 0 0 0"/>
+    <weld name="rigid6" body1="UJ6_1" body2="TOP_1" relpose="-0.100102147 0.009284 0.04 1 0 0 0"/>
+  </equality>
+
+<actuator>
+    <!-- 增益足够大才会稳定，TODO:为什么？s5存在问题，与TOP分离 -->
+    <position kp="10000.0" kv="0.1" name="s1_trans" joint="s1" ctrlrange="-0.0 0.19"/>
+    <position kp="10000.0" kv="0.1" name="s2_trans" joint="s2" ctrlrange="-0.0 0.19"/>
+    <position kp="10000.0" kv="0.1" name="s3_trans" joint="s3" ctrlrange="-0.0 0.19"/>
+    <position kp="10000.0" kv="0.1" name="s4_trans" joint="s4" ctrlrange="-0.0 0.19"/> 
+    <position kp="10000.0" kv="0.1" name="s5_trans" joint="s5" ctrlrange="-0.0 0.19"/>
+    <position kp="10000.0" kv="0.1" name="s6_trans" joint="s6" ctrlrange="-0.0 0.19"/>
+</actuator>
+</mujoco>
