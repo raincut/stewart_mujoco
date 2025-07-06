@@ -23,7 +23,7 @@ if __name__ == "__main__":
     with mujoco.viewer.launch_passive(sim.m, sim.d) as viewer:
         while True:
             step_start = time.time()
-            sim.apply_leg_lengths([0.05, 0.05, 0.05, 0.05, 0.05, 0.05])
+            # sim.apply_leg_lengths([0.05, 0.05, 0.05, 0.05, 0.05, 0.05])
             mujoco.mj_step(sim.m, sim.d)
             with viewer.lock():
                 viewer.opt.flags[mujoco.mjtVisFlag.mjVIS_CONTACTPOINT] = int(sim.d.time % 2)

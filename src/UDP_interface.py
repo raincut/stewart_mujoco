@@ -20,6 +20,7 @@ def udp_receive(local_ip, local_port, target_ip, target_port, timeout=0.1):
                 data, addr = udp_socket.recvfrom(1024)
                 if addr[0] != target_ip or addr[1] != target_port:
                     continue
+                print('reveived data from:', addr)
                 if len(data) != RECV_STRUCT_SIZE:
                     print(f"Received data length {len(data)} does not match expected length {RECV_STRUCT_SIZE}, skipping.")
                     continue
@@ -40,7 +41,7 @@ def udp_receive(local_ip, local_port, target_ip, target_port, timeout=0.1):
     finally:
         udp_socket.close()
 
-def udp_send(target_ip, target_port, feedback_data):
+def udp_send(targets, feedback_data):
     """
     发送UDP数据，feedback_data为长度14的列表，包含各项数据。
     """
@@ -55,22 +56,24 @@ def udp_send(target_ip, target_port, feedback_data):
         data = struct.pack(
             SEND_STRUCT_FORMAT,
             head,
-            int(feedback_data[0]),  # count
-            float(feedback_data[1]),  # status
-            float(feedback_data[2]),  # x
-            float(feedback_data[3]),  # y
-            float(feedback_data[4])/3.1415926*180,  # z
-            float(feedback_data[5])/3.1415926*180,  # roll
-            float(feedback_data[6])/3.1415926*180,  # yaw
-            float(feedback_data[7]),  # pitch
-            float(feedback_data[8]),  # l1
-            float(feedback_data[9]),  # l2
-            float(feedback_data[10]), # l3
-            float(feedback_data[11]), # l4
-            float(feedback_data[12]), # l5
+            int(feedback_data[0]),  # status
+            float(feedback_data[1]),  # x
+            float(feedback_data[2]),  # y
+            float(feedback_data[3]),  # z
+            float(feedback_data[4])/3.1415926*180,  # roll
+            float(feedback_data[5])/3.1415926*180,  # yaw
+            float(feedback_data[6])/3.1415926*180,  # pitch
+            float(feedback_data[7]),  # l1
+            float(feedback_data[8]),  # l2
+            float(feedback_data[9]),  # l3
+            float(feedback_data[10]), # l4
+            float(feedback_data[11]), # l5
+            float(feedback_data[12]), # l6
             tail
         )
-        udp_socket.sendto(data, (target_ip, target_port))
+        # udp_socket.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+        for target_ip, target_port in targets:
+            udp_socket.sendto(data, (target_ip, target_port))
     finally:
         udp_socket.close()
 

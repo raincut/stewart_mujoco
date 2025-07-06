@@ -9,10 +9,17 @@ import stewart_ik
 # from inverse_kinematics.stewart_ik import get_stewart_ik
 
 # UDP配置
-UDP_LOCAL_IP = '172.27.200.139'
+UDP_LOCAL_IP = '192.168.3.176'
 UDP_LOCAL_PORT = 3000
-UDP_TARGET_IP = '172.27.192.1'
+UDP_TARGET_IP = '192.168.3.23'
 UDP_TARGET_PORT = 3001
+UDP_TARGET_IP2 = '192.168.3.23'
+UDP_TARGET_PORT2 = 3002
+
+targets= [
+    (UDP_TARGET_IP, UDP_TARGET_PORT),
+    (UDP_TARGET_IP2, UDP_TARGET_PORT2)
+]
 
 # Mujoco配置
 XML_PATH = 'stewart.xml'
@@ -81,7 +88,7 @@ def main_control_loop():
 
             # 4. UDP反馈
             feedback_data = controller.get_feedback()
-            udp_send(UDP_TARGET_IP, UDP_TARGET_PORT, feedback_data)
+            udp_send(targets, feedback_data)
 
             with viewer.lock():
                 viewer.opt.flags[mujoco.mjtVisFlag.mjVIS_CONTACTPOINT] = int(sim.d.time % 2)
