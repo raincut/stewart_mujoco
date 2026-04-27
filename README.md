@@ -30,8 +30,10 @@
 ## System Movement
 # 1. /src/overall.mp4
 # 2
-<video width="800" controls>
-  <source src="https://github.com/user-attachments/assets/b6bd7e45-1bb4-4af2-af39-c5e3486ca143" type="video/mp4">
-</video>
+
+https://github.com/user-attachments/assets/001766cc-0c1f-4c03-b2d4-ef30b2dec500
+
+
+
 
 *系统按照指令执行运动的实际演示。*
