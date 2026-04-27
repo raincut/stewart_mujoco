@@ -30,7 +30,9 @@
 ## System Movement
 
 
-
+<video width="800" controls>
+  <source src="https://github.com/raincut/stewart_mujoco/src/overall" type="video/mp4">
+</video>
 
 <video width="800" controls>
   <source src="https://github.com/user-attachments/assets/b6bd7e45-1bb4-4af2-af39-c5e3486ca143" type="video/mp4">
